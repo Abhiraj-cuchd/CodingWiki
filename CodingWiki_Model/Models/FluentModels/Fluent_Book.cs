@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace CodingWiki_Model.Models
 {
-    public class Book
+    public class Fluent_Book
     {
         [Key]
         public int IdBook {  get; set; }
@@ -22,12 +22,12 @@ namespace CodingWiki_Model.Models
         [NotMapped]
         public string PriceRange { get; set; }
 
-        public BookDetail BookDetail { get; set; }
+        public Fluent_BookDetail BookDetail { get; set; }
 
         [ForeignKey("Publisher")]
         public int Publisher_Id { get; set; }
-        public Publisher Publisher { get; set; }
+        public Fluent_Publisher Publisher { get; set; }
 
-        public List<BookAuthorMap> BookAuthor {  get; set; }
+        public List<Fluent_Author> Authors {  get; set; }
     }
 }
